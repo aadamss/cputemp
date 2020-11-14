@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CPU Temperature Meter</title>
+</head>
+<body>
+  <h1>CPU Temperature Meter</h1>
+  <h2>Service provides constant and up to date measuremtns of your CPU's temperature</h2>
+  <h3 id='temp'>No data received</h3>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    socket.on('chat message', function(msg){
+      document.getElementById('temp').innerHTML = msg;
+    });
+  </script>
+</body>
+</html>
