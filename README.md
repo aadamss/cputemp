@@ -1,4 +1,4 @@
 ## CPU Temperature Meter
 
-Installation: yarn
+Installation: yarn  
 Run: yarn serve
