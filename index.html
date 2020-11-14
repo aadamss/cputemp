@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CPU Temperature Meter</title>
+  <style>
+    h3 {color:red}
+  </style>
 </head>
 <body>
   <h1>CPU Temperature Meter</h1>
@@ -12,7 +15,7 @@
   <script src="/socket.io/socket.io.js"></script>
   <script>
     const socket = io();
-    socket.on('chat message', function(msg){
+    socket.on('CPU', function(msg){
       document.getElementById('temp').innerHTML = msg;
     });
   </script>

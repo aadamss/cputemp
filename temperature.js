@@ -20,7 +20,7 @@ http.listen(3000, function () {
 
 setInterval(() => {
   si.cpuTemperature().then((tmp) => {
-    io.emit('chat message', tmp.main);
+    io.emit('CPU', tmp.main);
     console.log(tmp.main);
   });
 }, 1000);
