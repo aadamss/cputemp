@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-io.on('connection', (socket) => {
+io.on('connection', () => {
   console.log('a user connected');
 });
 
