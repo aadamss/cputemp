@@ -18,8 +18,3 @@ open the frontend webpage by accessing http://localhost:3000/
 - **_sockets.io_** for web sockets
 - **_systeminformation_** to get the information about the computer from the client
 - **_osx-temperature sensor_** for better macOS support from the systeminformation package
-
-#### Application info:
-
-- **_JavaScript/HTML_** was used to build the frontend part with minor **_CSS_** features
-- **_Node.js_** was used to build the backend server
