@@ -20,7 +20,8 @@ http.listen(3000, function () {
 
 setInterval(() => {
   si.cpuTemperature().then((tmp) => {
-    io.emit('CPU', tmp.main);
+    const temp = tmp.main.toFixed(1) + ' °C';
+    io.emit('CPU', temp);
     console.log(tmp.main);
   });
 }, 1000);

@@ -3,15 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CPU Temperature Meter</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
   <style>
-    h3 {color:red}
+    body {
+      background: #bdc3c7;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);  
+      background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+      font-family: 'Lato', sans-serif;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+    h1, h2 {
+      color: white;
+      font-weight: 300;
+      display: block;
+    }
+    h2 {
+      font-size: medium;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin: 20% auto;
+      max-width: 30%;
+    }
+
+    #temp {
+      color:#bdc3c7;
+      font-size: 70px;
+      font-weight: 700;
+    }
   </style>
+  <title>CPU Temperature Meter</title>
 </head>
 <body>
-  <h1>CPU Temperature Meter</h1>
-  <h2>Service provides constant and up to date measuremtns of your CPU's temperature</h2>
-  <h3 id='temp'>No data received</h3>
+  <div class="container">
+    <h1>CPU Temperature Meter</h1>
+    <h2>Service provides constant and up to date measurements of your CPU's temperature</h2>
+    <div id='temp'>No data received</div>
+  </div>
   <script src="/socket.io/socket.io.js"></script>
   <script>
     const socket = io();
